@@ -17,7 +17,7 @@ int pow(int b, int e)
     if (e == 0) return 1;
     int half = pow(b, e / 2);
     half = half * half;
-    if (e % 2 == 1) half = base * half;
+    if (e % 2 == 1) half = b * half;
     return half;
 }
 

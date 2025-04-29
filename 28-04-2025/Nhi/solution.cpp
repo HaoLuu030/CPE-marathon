@@ -43,5 +43,5 @@ int main()
         cout << "Pair #" << i + 1 << ": " << ((L == 1) ? "Love is not all we need" : "All you need is love" ) << endl;
     }
 
-    return 1;
+    return 0;
 }

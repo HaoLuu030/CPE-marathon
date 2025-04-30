@@ -20,6 +20,7 @@ void towerOfHanoi(int n, int start, int end, int terminate_move) {
   }
   int auxiliary = 6 - start - end;
   towerOfHanoi(n - 1, start, auxiliary, terminate_move);
+  // another check point to make sure the move doesn't exceed the terminate move
   if (move__ >= terminate_move)
     return;
   move__++;

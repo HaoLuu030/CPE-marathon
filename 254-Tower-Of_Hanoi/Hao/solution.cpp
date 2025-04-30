@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // global variable to track move and number of disks on each rod
@@ -32,19 +33,12 @@ int main() {
     while(cin >> a >> b)
     {
         if (a == 0 && b == 0) break;
-        for (int i = 0; i < 3; i++)
-        {
-            rods[i] = 0;
-        }
         move__ = 0;
         rods[0] = a;
-        string output = "";
+        rods[1] = 0;
+        rods[2] = 0;
         towerOfHanoi(a, 1, 3, b);
-        for (int i = 0; i < 3; i++)
-        {
-            output += to_string(rods[i]);
-            if (i != 2) output+= ' ';
-        }
-        cout << output << '\n';
+        cout << rods[0] << ' ' << rods[1] << ' ' << rods[2] << endl;
     }
+    return 0;
 }

@@ -6,8 +6,9 @@ using namespace std;
 // assuming we have 3 rods: start, end, and auxiliary rods
 // move the largest disk from start to end rod
 //      in order to do this, we move the top n - 1 disks to the auxiliary rod
-//          in order to do this, we move the top n -1 disks from the start rod to the end rod (it's an auxiliary rod in this case)
+//          in order to do this, we move the top n - 2 disks from the start rod to the end rod (it's an auxiliary rod in this case)
 //          so that's where the recursion blends in beautifully
+// repeat the process until we reach the base case
 
 
 
@@ -19,7 +20,7 @@ void printMove(int d, int start, int end)
 
 void hanoi(int n, int start, int end)
 {
-    // if there's only one disk (aks base case)
+    // if there's only one disk (as base case)
     if (n == 1)
     {
         printMove(n, start, end);

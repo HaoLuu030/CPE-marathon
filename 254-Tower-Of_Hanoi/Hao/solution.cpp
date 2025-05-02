@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 long long current_move = 0;
@@ -53,4 +52,5 @@ int main()
             cout << pegs[0] << ' ' << pegs[2] << ' ' << pegs[1] << endl;
         }
     }
+    return 0;
 }

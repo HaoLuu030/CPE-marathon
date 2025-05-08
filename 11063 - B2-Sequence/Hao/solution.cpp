@@ -42,6 +42,15 @@ int main()
                 break;
             }
         }
+        // has negative numbers
+        for (int i = 0; i < N; i++)
+        {
+            if (v[i] < 1)
+            {
+                isB2 = false;
+                break;
+            }
+        }
         if(!isB2)
         {
             cout << "Case #" << testCase << ": " << "It is not a B2-Sequence.\n" << endl;

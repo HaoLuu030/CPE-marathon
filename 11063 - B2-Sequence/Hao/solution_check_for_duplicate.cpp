@@ -15,7 +15,7 @@ int main()
         vector<int> v(N);
         vector<int> copy;
         vector<int> result;
-        if (N < 2 || N > 100)
+        if (N < 2)
         {
             isB2 = false;
         }
@@ -28,11 +28,11 @@ int main()
         auto it = unique(copy.begin(), copy.end());
         copy.erase(it, copy.end());
         // has duplicate
-        if (v.size() != copy.size())
-        {
-            cout << "Case #" << testCase << ": " << "It is not a B2-Sequence.\n" << endl;
-            continue;
-        }
+        // if (v.size() != copy.size())
+        // {
+        //     cout << "Case #" << testCase << ": " << "It is not a B2-Sequence.\n" << endl;
+        //     continue;
+        // }
         // not sorted
         for (int i = 0; i < N; i++)
         {

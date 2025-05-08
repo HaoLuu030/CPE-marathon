@@ -39,6 +39,9 @@ int main() {
   while (cin >> m >> d >> y) {
     if (m == 0 && d == 0 && y == 0)
       break;
+    // set this to one so that
+    // the first day is Saturday according to the Gregorian calendar
+    // just trial and error (no logic behind it)
     day = 1;
     if (isValid(m, d, y)) {
       // handle year

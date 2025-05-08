@@ -11,6 +11,7 @@ int main()
     {
         testCase++;
         isB2 = true;
+        // a sequence that has one element is not a b2-sequence
         if (N < 2)
         {
             isB2 = false;

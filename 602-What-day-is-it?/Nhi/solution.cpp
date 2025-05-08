@@ -30,7 +30,7 @@ int main()
         if (d == 0 && m == 0 && y == 0) break;
         if (!isValid(d, m, y))
         {
-            cout << d << "/" << m << "/" << y << " is an invalid date." << endl;
+            cout << m << "/" << d << "/" << y << " is an invalid date." << endl;
             continue;
         }
         int w = 1;

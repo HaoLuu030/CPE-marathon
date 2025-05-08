@@ -7,13 +7,12 @@ long long bigMod(int B, int P, int M)
     long long half = bigMod(B, P / 2, M);
     if (P % 2 == 0)
     {
-        half = (half*half) % M;
+        return (half*half) % M;
     }
     else
     {
-        half = B * half * half % M;
+        return B * half * half % M;
     }
-    return half;
 }
 
 int main()

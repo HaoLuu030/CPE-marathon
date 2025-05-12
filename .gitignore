@@ -1,0 +1,4 @@
+#ignore all C++ compiled file
+*.out
+#ignore vscode setting
+.vscode/

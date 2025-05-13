@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, testCase = 0;
+    while (cin >> n) {
+        testCase++;
+        vector<int> a(n);
+        set<int> sumSet;
+        bool isB2 = true;
+
+        for (int i = 0; i < n; i++) 
+		{
+            cin >> a[i];
+        }
+
+        if (a[0] <= 0) isB2 = false;
+        for (int i = 1; i < n; i++) {
+            if (a[i] <= a[i - 1]) isB2 = false;
+        }
+
+        for (int i = 0; i < n && isB2; i++) 
+		{
+            for (int j = i; j < n; j++) 
+			{  
+                int sum = a[i] + a[j];
+                if (sumSet.count(sum)) 
+				{
+                    isB2 = false;
+                    break;
+                }
+                sumSet.insert(sum);
+            }
+        }
+
+        cout << "Case #" << testCase << ": ";
+        if (isB2) cout << "It is a B2-Sequence." << endl;
+        else cout << "It is not a B2-Sequence." << endl;
+        cout << endl; 
+    }
+    return 0;
+}

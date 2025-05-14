@@ -2,3 +2,6 @@
 *.out
 #ignore vscode setting
 .vscode/
+#ignore the problem manager
+problem-manager.cpp
+problem-list.txt

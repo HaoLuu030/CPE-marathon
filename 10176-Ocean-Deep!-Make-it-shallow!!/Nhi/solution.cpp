@@ -27,8 +27,8 @@ int binary_to_decimal(string n)
     long long decimal = 0;
     for (int i = 1; i < n.size(); i++)
     {
-        if (n[i] == '0') continue;
-        decimal += big_mod(2, i - 1, c);
+        if (n[i] == 1)
+        decimal = (decimal + big_mod(2, i - 1, c)) % c;
     }
     return decimal;
 }
@@ -47,11 +47,11 @@ int main()
         if (nu[index] == '#')
         {
             long long n = binary_to_decimal(str);
-            if (n % c == 0) cout << "YES" << endl;
+            if (n == 0) cout << "YES" << endl;
             else cout << "NO" << endl;
             str = "";
         }   
     }
-    
+    return 0;
 
 }

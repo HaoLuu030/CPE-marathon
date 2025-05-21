@@ -8,7 +8,7 @@ const int c = 131071;
 long long big_mod(int a, int b, int c)
 {
     if (b == 0) return 1;
-    int half = big_mod(a, b/2, c);
+    long long half = big_mod(a, b/2, c);
     if (b % 2 == 0)
     {
         half = half * half % c;
